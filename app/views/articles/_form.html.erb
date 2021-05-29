@@ -1,0 +1,41 @@
+<% if(@article.errors.any?) %>
+  <ul> 
+    <% @article.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%
+=begin%>
+ <%= form_for( @article , remote: true) do |f| %>
+  <%= f.label :title %>
+  <div>
+    <%= f.text_field :title %>
+  </div>
+
+  <%= f.label :description %>
+  <div>
+    <%= f.text_area :description %>
+  </div>
+
+  <%= f.submit %>
+<% end %>  
+<%
+=end%>
+
+<%= form_with(model: @article, local: true) do |f| %>
+
+  <%= f.label :title %>
+  <div>
+    <%= f.text_field :title %>
+  </div>
+
+  <%= f.label :description %>
+  <div>
+    <%= f.text_area :description %>
+  </div>
+
+  <%= f.submit %>
+
+<% end %>
