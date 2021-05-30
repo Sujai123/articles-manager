@@ -7,7 +7,7 @@
         added by me
       </div>
       <div class="card-body">
-        <p class="card-text text-left"><%= @article.description %></p>
+        <p class="card-text text-left"><%= simple_format(@article.description) %></p>
         <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-primary" %>
         <%= link_to "Delete", @article, method: :delete, class: "btn btn-outline-danger" %>
       </div>
