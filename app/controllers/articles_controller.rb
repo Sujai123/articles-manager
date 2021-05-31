@@ -54,7 +54,7 @@ class ArticlesController < ApplicationController
   end
 
   def require_same_user
-    if (!is_current_user?(@article.user))
+    if (!is_current_user?(@article.user) && !current_user.admin?)
       flash[:error] = "You can only edit your own account"
       redirect_to @article
     end
