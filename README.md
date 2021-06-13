@@ -1,24 +1,20 @@
-# README
+# Articles Manager
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails Project for manager users and articles
 
-Things you may want to cover:
+1. Any of the users can view their own articles or other articles.
+2. Users can edit or delete their
+3. Users can be able to sign up as an user
+4. Password are stored in an hashed format
+5. For ui used bootstrap
 
-* Ruby version
+The gems used in this project are
 
-* System dependencies
+1. bcrypt
+2. will_paginate
+3. bootstrap
+4. sqlite3
 
-* Configuration
+You can find the preview of this project in [here](https://arcane-cliffs-03675.herokuapp.com/)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Good Day
