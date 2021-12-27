@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_31_181801) do
+ActiveRecord::Schema.define(version: 2021_12_22_121123) do
 
   create_table "article_categories", force: :cascade do |t|
     t.integer "article_id"
@@ -29,6 +29,25 @@ ActiveRecord::Schema.define(version: 2021_05_31_181801) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "communities", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "companies", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "config_settings", force: :cascade do |t|
+    t.string "name"
+    t.bigint "configurable_id"
+    t.string "configurable_type"
+    t.string "type"
+    t.json "config_value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["configurable_type", "configurable_id"], name: "index_config_settings_on_configurable_type_and_configurable_id"
   end
 
   create_table "users", force: :cascade do |t|
